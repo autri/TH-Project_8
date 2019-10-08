@@ -21,14 +21,15 @@ h1 {
     justify-content: space-between;
 }
 
-.item, .item > * {
+.card, .card > * {
     background-color: white;
 }
 
-.item {
+.card {
     margin: 20px auto;
-    height: 200px;
-    width: 30%;
+    padding: 20px;
+    height: 170px;
+    width: 25%;
     min-width: 300px;
     border: 2px solid lightgray;
     border-radius: 5px;
@@ -40,16 +41,18 @@ h1 {
         "photo name name"
         "photo email email"
         "photo city city"
-        "photo . ."
+        "photo . .";
 }
 
 .name {
     font-weight: 500;
     grid-area: name;
+    margin-bottom: 5px;
 }
 
 .email {
     grid-area: email;
+    align-self: end;
 }
 
 .city {
@@ -58,10 +61,18 @@ h1 {
 
 .email, .city {
     color: #707B7C;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 20px;
 }
 
 .photo {
     border-radius: 50%;
-    width: 50%;
+    margin: auto;
+    width: 125px;
     grid-area: photo;
+}
+
+.card p {
+    padding-left: 20px;
 }
