@@ -43,7 +43,7 @@ function displayEmployees(employeeData) {
         employeeHTML += `
             <div class="card" data-index="${index}">
                 <img class="photo" src="${picture}" alt="${name}">
-                <p class="name">${name}</p>
+                <h2 class="name">${name}</h2>
                 <p class="email">${email}</p>
                 <p class="city">${city}</p>
             </div>
@@ -60,6 +60,7 @@ function displayModal(index) {
 
     let date = new Date(dob.date);
 
+    console.log(street);
     const modalHTML = `
         <img class="photo" src="${picture.large}" />
             <div class="text-container">
@@ -67,9 +68,9 @@ function displayModal(index) {
                 <p class="email">${email}</p>
                 <p class="address">${city}</p>
                 <hr />
-                <p>${phone}</p>
-                <p class="address">${street}, ${state} ${postcode}</p>
-                <p>Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
+                <p class="phone">${phone}</p>
+                <p class="address">${street.number} ${street.name}, ${state} ${postcode}</p>
+                <p class="dob">Birthday: ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
             </div>
     `;
 
